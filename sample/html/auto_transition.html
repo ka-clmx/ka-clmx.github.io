@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TEST CONTENTS: Auto transition</title>
+  </head>
+  <body onload="init()">
+    move another page after 5sec.
+  </body>
+  <script type="text/javascript">
+    const init = () => {
+      setTimeout(() => {
+        window.location.href = './redirected.html';
+      }, 5 * 1000);
+    }
+  </script>
+</html>
