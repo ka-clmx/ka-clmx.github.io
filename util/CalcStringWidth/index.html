@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="./index.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="main">
+      <div class="title">Calc Font Size</div>
+      <div>
+        <p>Font name</p>
+        <input id="Name">
+        <p>Font size</p>
+        <input id="Size">
+        <p>Font weight</p>
+        <input id="Weight">
+        <p>Text</p>
+        <input id="Text">
+      </div>
+      <div>
+        <p>
+          <button id="Apply">
+            Apply
+          </button>
+        </p>
+      </div>
+    </div>
+    <div class="main">
+      <div id="Style"></div>
+      <div id="Result"></div>
+    </div>
+    <div class="preview">
+      <div id="Preview"></div>
+    </div>
+  </body>
+  <script>
+    const stylePreview = document.getElementById('Style');
+    const result = document.getElementById('Result');
+    const preview = document.getElementById('Preview');
+    const button = document.getElementById('Apply');
+
+    const forms = {}
+    const ids = ['Name', 'Size', 'Weight', 'Text'];
+    ids.forEach(_id => {
+      forms[_id.toLowerCase()] = document.getElementById(_id);
+    });
+
+    const apply = () => {
+      console.log('Update');
+      const fontFamily = forms.name.value ? `font-family: ${forms.name.value};` : '';
+      const fontSize = `font-size: ${forms.size.value ? forms.size.value : '16px'};`;
+      const fontWeight = forms.weight.value ? `font-weight: ${forms.weight.value}` : '';
+
+      const style = `${fontFamily} ${fontSize} ${fontWeight}`;
+      const value = forms.text.value;
+
+      preview.innerText = value;
+      preview.setAttribute('style', style);
+
+      const { width } = preview.getBoundingClientRect();
+      result.innerText = `Width: ${width} px`
+      stylePreview.innerText = `style="${style}"`;
+    };
+
+    button.addEventListener('click', apply);
+  </script>
+</html>

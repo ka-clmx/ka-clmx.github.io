@@ -1,0 +1,36 @@
+:root {
+  font-size: 100px;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: .3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.main {
+  display: flex;
+  flex-direction: inherit;
+  align-items: inherit;
+  justify-content: center;
+  font-size: .15rem;
+}
+
+.title {
+  font-size: .2rem;
+  font-weight: 700;
+}
+
+.preview {
+  max-width: 90%;
+  overflow: auto;
+  display: flex;
+  flex-direction: inherit;
+  align-items: inherit;
+  justify-content: center;
+  padding: .3rem 0;
+}
