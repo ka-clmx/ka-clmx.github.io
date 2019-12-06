@@ -57,7 +57,7 @@
       preview.setAttribute('style', style);
 
       const { width } = preview.getBoundingClientRect();
-      result.innerText = `Width: ${width} px`
+      result.innerText = `Width: ${Math.round(width * 100) / 100} px`
       stylePreview.innerText = `style="${style}"`;
     };
 
