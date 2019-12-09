@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    This window will be crushed
+  </body>
+  <script>
+    let a = ['a']
+    const voidout = () => {
+      a = [...a, ...a];
+    }
+    setInterval(voidout, 100);
+  </script>
+</html>
