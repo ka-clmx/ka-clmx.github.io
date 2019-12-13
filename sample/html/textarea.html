@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      textarea {
+        height: 15em;
+        width: 20rem;
+      }
+    </style>
+  </head>
+  <body onload="init()">
+    <p>
+      <textarea id="textarea"></textarea>
+    </p>
+    <p>
+      <textarea id="textarea2" disabled></textarea>
+    </p>
+  </body>
+  <script>
+    const init = () => {
+      const statements = [...new Array(500)].map(() => Math.random() * 100).join('');
+      const textarea = document.getElementById('textarea');
+      const textarea2 = document.getElementById('textarea2');
+      textarea.innerText = statements;
+      textarea2.innerText = statements;
+    }
+  </script>
+</html>
