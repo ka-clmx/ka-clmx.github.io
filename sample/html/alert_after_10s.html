@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TEST CONTENTS: Alert</title>
+  </head>
+  <body onload="init()">
+    Alert
+  </body>
+  <script type="text/javascript">
+    const init = () => {
+      const count = localStorage.getItem('count') || 0;
+      setTimeout(() => {
+        alert('Fire alert!!');
+      }, 10 * 1000);
+      document.title = `${document.title} [${count}]`;
+      localStorage.setItem('count', count + 1);
+    }
+  </script>
+</html>
