@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TEST CONTENTS: onBeforeUnload</title>
+  </head>
+  <body onload="init()">
+    onBeforeUnload
+  </body>
+  <script type="text/javascript">
+    const onbeforeunload = () => {
+      console.log('Called onbeforeunload');
+    }
+    const init = () => {
+      window.onbeforeunload = onbeforeunload;
+    }
+  </script>
+</html>
