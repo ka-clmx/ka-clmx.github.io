@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TEST CONTENTS: Input</title>
+  </head>
+  <body onload="init()">
+    <input id="input" />
+  </body>
+  <script type="text/javascript">
+    const onchange = () => {
+      console.log('onchange');
+    }
+    const oninput = () => {
+      console.log('oninput');
+    }
+    const init = () => {
+      const input = document.getElementById('input');
+      input.addEventListener('input', onchange);
+      input.addEventListener('change', onchange);
+    }
+  </script>
+</html>
